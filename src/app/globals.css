@@ -1,33 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.hero {
+  background: linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+
+.menu{
+  backdrop-filter: blur(10px);
+}
+
+.perspective:hover {
+  transform: rotateX(90deg);
+}
+
+.perspective:hover + .main {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.perspective:hover + .container {
+  opacity: 1;
+}
+
+.perspective {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  
+}
+
+.perspective p {
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.perspective p:nth-of-type(2) {
+  position: absolute;
+  transform-origin: bottom center;
+  transform: rotateX(-90deg) translateY(13px);
+  opacity: 0;
+}
+
+.perspective:hover p:nth-of-type(1) {
+  transform: translateY(-90%);
+  opacity: 0;
+}
+
+.link{
+  perspective: 190px;
+  perspective-origin: bottom;
+}
+
+.perspective:hover  p:nth-of-type(2) {
+  opacity: 1;
+
+ 
+}
+
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 799px) {
+  .slideshow {
+      max-width: 800px;
+      max-height: 600px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.slideshow{
+  top: 100px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.header{
+  top: -500px;
+
 }
+
+@media (max-width: 798px) {
+  .slideshow {
+      max-width: 70%;
+      max-height: 90%;
+  }
+ .slideshow{
+  top: 150px
+ }
+
+ .header{
+top: -600px;
+ }
+}
+
+.first--photo{
+  position: absolute;
+  top: 0;
+  width: 300px !important;
+  z-index: 999 !important;
+}
+
