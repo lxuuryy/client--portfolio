@@ -19,7 +19,7 @@ function About() {
             <div className='w-[50%] md:border-r-2 border-black'>
                 <div className=''>
                 <p className='font-gothic text-[22px] sm:text-[32px] md:text-[60px] ml-6 py-2'>
-                    I am Jared and <br /> I'm a <br />photographer from the heart
+                    I am Jared and <br /> I&apos;m a <br />photographer from the heart
                 </p>
                 </div>
                 <div>
