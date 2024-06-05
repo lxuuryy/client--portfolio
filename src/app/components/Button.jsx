@@ -13,7 +13,7 @@ function Button({isOpen, setIsOpen, label}) {
 
     
     return (
-        <div className='fixed right-[20px] top-[20px] backdrop-blur-sm'>
+        <div className='fixed right-[20px] top-[20px] '>
              <Menu  isOpen={isOpen} setIsOpen={setIsOpen}/>
             <div onClick={toggleIsOpen} className='h-[40px] w-[100px] border rounded-xl overflow-hidden cursor-pointer absolute top-0 right-0'>
                 <motion.div
@@ -21,7 +21,7 @@ function Button({isOpen, setIsOpen, label}) {
                     className='relative h-full w-full'
                     transition={{ ease: [0.65, 0, 0.35, 1] ,  duration: 0.5, type: "tween"}}
                 >
-                    <div className='h-[100%] w-full  '>
+                    <div className='h-[100%] w-full bg-white  '>
                         <PerspectiveText label='MENU' />
                     </div>
                     <div className='h-[100%] bg-black text-white w-full   absolute top-[100%]'>
