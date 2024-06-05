@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Floating from './Floating';
 import { motion } from 'framer-motion'
+import Details from './Details';
 
 function Hero() {
     const imageTextPairs = [
@@ -47,7 +48,7 @@ function Hero() {
                         className="absolute inset-0 object-cover object-center transition-opacity duration-1000 opacity-100"
                     />
                     <div className={` header image-text absolute inset-0 flex justify-center items-center transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
-                        <p className='font-gothic text-[40px] text-center text-balance'>{image.text}</p>
+                        <p className='font-gothic text-[20px] md:text-[32px] mt-[10px] text-center text-balance'>{image.text}</p>
                     </div>
                    
                 </div>
@@ -55,7 +56,7 @@ function Hero() {
             ))}
          
         </motion.div>
-        
+       
     </div>
     
     

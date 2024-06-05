@@ -32,7 +32,7 @@ function Floating() {
 
     }, [])
   return (
-    <div className='z-[99] overflow-hidden' >
+    <div className='  z-[99] overflow-hidden' >
         <AnimatePresence>
         {!active && 
         <motion.div initial={{opacity: 0, y:600}}  transition={{duration: 2, delay: 0.2, ease:'easeInOut'}} animate={{opacity:1, y: 0}} exit={{opacity: 0, y: -300}}className='
@@ -50,13 +50,13 @@ function Floating() {
       <AnimatePresence>
       {!active3 &&
       <motion.div initial={{opacity: 0, y:600}} transition={{duration: 2, delay: 0.3, ease:'easeInOut'}} animate={{opacity:1, y: 0}} exit={{opacity: 0, y: -300}} className='
-      absolute overflow-hidden w-[100px] mt-[300px] ml-[250px] sm:w-[200px] sm:ml-[420px] md:w-[300px] lg:w-[400px] lg:ml-[600px] xl:w-[500px] xl:ml-[700px] xl:mt-[200px] 2xl:ml-[1100px]'>
+      absolute overflow-hidden w-[150px] mt-[300px] ml-[250px] sm:w-[200px] sm:ml-[420px] md:w-[300px] lg:w-[400px] lg:ml-[600px] xl:w-[500px] xl:ml-[700px] xl:mt-[200px] 2xl:ml-[1100px]'>
         <Image  src="/image2.jpg" alt="Ambition Podcast" className='' width={800} height={400} />
       </motion.div>}
       </AnimatePresence>
       <AnimatePresence>
       { !active4 && <motion.div initial={{opacity: 0, y:600}} transition={{duration: 2, delay: 0.6, ease:'easeInOut'}} animate={{opacity:1, y: 0}} exit={{opacity: 0, y: -300}} className='
-      absolute overflow-hidden w-[150px] mt-[500px] ml-[220px] sm:w-[200px] sm:ml-[420px] md:w-[300px] lg:w-[400px] lg:ml-[700px] lg:mt-[600px] xl:w-[500px] 2xl:ml-[1200px] xl:mt-[550px]'>
+      absolute overflow-hidden w-[150px] mt-[500px] ml-[220px] sm:w-[200px] sm:ml-[420px] md:w-[300px] lg:w-[400px] lg:ml-[700px] lg:mt-[600px] xl:w-[500px] xl:ml-[750px] 2xl:ml-[1200px] xl:mt-[550px]'>
         <Image  src="/Blazing_Sunset_Crop.jpg" alt="Ambition Podcast" className='' width={800} height={400} />
       </motion.div>} 
       </AnimatePresence>
