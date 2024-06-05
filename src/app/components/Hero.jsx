@@ -35,7 +35,7 @@ function Hero() {
     }, [imageTextPairs.length]);
 
     return (
-        <div className="slideshow-container absolute mt-[100px] top-0 left-0 w-full h-full flex justify-center items-center">
+        <div className="slideshow-container absolute mt-[100px] top-0 left-0 w-full h-[600px] flex justify-center items-center">
             
          
             

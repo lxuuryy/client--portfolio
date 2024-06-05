@@ -15,7 +15,7 @@ function Details() {
     const [portraits, setPortraits] = React.useState(true)
   return (
     <div>
-    <motion.div initial={{opacity:0}} transition={{duration: 1}} whileInView={{opacity: 1}}  viewport={{once:true}} className='w-full flex justify-evenly mt-[750px] md:mt-[850px] lg:mt-[1150px] font-gothic'>
+    <motion.div initial={{opacity:0}} transition={{duration: 1}} whileInView={{opacity: 1}}  viewport={{once:true}} className='w-full flex justify-evenly mt-[700px] sm:mt-[700px] md:mt-[850px] lg:mt-[1050px] font-gothic'>
         <div onClick={() => setPortraits(true)} className={`cursor-pointer hover:underline text-[22px] md:text-[32px] ${portraits ? 'underline' : 'none'}  `}>PORTRAITS</div>
         <div onClick={() => setPortraits(false)} className={`cursor-pointer hover:underline text-[22px] md:text-[32px] ${portraits ? 'none' : 'underline'}  `}> LANDSCAPES </div>
     </motion.div>

@@ -86,7 +86,7 @@
 
 .slideshow {
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
 
 .para{
@@ -130,6 +130,7 @@
 @media (max-width: 939px) {
   .slideshow {
       width: 550px;
+      height: 600px;;
   }
  .slideshow{
   top: 150px
@@ -143,20 +144,42 @@ top: 200px;
 @media (max-width: 798px) {
   .slideshow {
     width: 450px;
+    height: 350px;;
 }
 .slideshow{
 top: 150px
 }
 
-.header{
-top: 00px;
+
 }
-}
+
+@media (max-width: 801px) {
+  .header{
+    margin-top: 200px;
+  
+  }}
+
+
+
+@media (max-width: 535px) {
+  .header{
+    margin-top: 100px;
+  
+  }}
 
 @media (max-width: 493px) {
   .slideshow {
     width: 350px;
+    height: 300px;;
    
+}
+.header{
+  margin-top: 300px;
+  }
+
+.header{
+top: 700px;
+
 }
 .slideshow{
 top: 150px
