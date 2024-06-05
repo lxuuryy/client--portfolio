@@ -25,12 +25,12 @@ export default function Home() {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height*3])
  
   const images = [
-    '/Ben Chair Portrait 4.jpg',
+    '/new3.jpg',
     '/Sincidium Portrait 6.jpg',
     '/Ben and Oliver 2.jpg',
     '/Ben and Oliver 3.jpg',
     '/new2.jpg',
-    '/Ben Chair Portrait 2.jpg',
+    '/new4.jpg',
     '/Ben Chair Portrait 6.jpg',
     '/new1.jpg',
     '/Sincidium Portrait 1.jpg',
@@ -53,7 +53,7 @@ export default function Home() {
       <div ref={ref}  className="h-[175vh] flex bg-white gap-[2vw] box-border overflow-hidden ">
         <Column images={[images[0], images[1], images[2]]} y={y} top={'-45%'} />
         <Column images={[images[3], images[4], images[5]]} y={y2} top={'-100.5%'}/>
-        <Column images={[images[6], images[7], images[8]]} y={y3} top={'-45.5%'}/>
+        <Column hidden='hidden' block='block' images={[images[6], images[7], images[8]]} y={y3} top={'-45.5%'}/>
        
       </div>
         <Form />
@@ -61,9 +61,9 @@ export default function Home() {
   );
 }
 
-const Column =({images, y, top}) => {
+const Column =({images, y, top, hidden}) => {
   return (
-    <motion.div style={{y:y, top:top}} className="flex flex-col w-[45%] h-[100%] min-w-[50px] relative  ">
+    <motion.div style={{y:y, top:top}} className={`flex flex-col w-[100%] h-[100%] min-w-[50px] relative  ${hidden? 'item' : ''}` }>
       {images.map((image, index) => (
         <div key={index} className="relative w-full h-full my-2 ">
           <Image className="rounded-xl " src={image} layout="fill" alt={image} objectFit="cover"  />
