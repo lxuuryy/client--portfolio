@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 
 function Details() {
@@ -14,10 +15,10 @@ function Details() {
     const [portraits, setPortraits] = React.useState(true)
   return (
     <div>
-    <div className='w-full flex justify-evenly mt-[1150px] font-gothic'>
+    <motion.div initial={{opacity:0}} transition={{duration: 1}} whileInView={{opacity: 1}}  viewport={{once:true}} className='w-full flex justify-evenly mt-[750px] md:mt-[850px] lg:mt-[1150px] font-gothic'>
         <div onClick={() => setPortraits(true)} className={`cursor-pointer hover:underline text-[22px] md:text-[32px] ${portraits ? 'underline' : 'none'}  `}>PORTRAITS</div>
         <div onClick={() => setPortraits(false)} className={`cursor-pointer hover:underline text-[22px] md:text-[32px] ${portraits ? 'none' : 'underline'}  `}> LANDSCAPES </div>
-    </div>
+    </motion.div>
     {portraits && <div className='w-full flex  flex-col md:flex-row justify-around items-center mt-[100px]  '>
         <div className='flex mb-[50px] md:mb-[0px] '>
             <div>
@@ -26,7 +27,7 @@ function Details() {
             <div>
             <img src='/new2.jpg' className='w-[150px] md:w-[200px] ml-[20px] mt-[100px]' alt='image1' />
                 </div></div>
-        <div>
+        <motion.div initial={{opacity:0}} transition={{duration: 1}} whileInView={{opacity: 1}} viewport={{once:true}} >
             <div className='for--border pb-[10px] text-[32px] '>PORTRAITS + <br /> HEADSHOTS</div>
             <div className='text-[22px] pt-[10px]'>Let's capture your story with a <br/> stunning professional portrait shoot.</div>
             <div>
@@ -44,7 +45,7 @@ Get in touch
 </button>
 </  div>
             </div>
-        </div>
+        </motion.div>
     </div>}
     <div>
     {portraits === false && <div className='w-full flex flex-col md:flex-row justify-around items-center mt-[100px] '>
@@ -55,7 +56,7 @@ Get in touch
             <div>
             <img src='/Beach_Head.jpg' className=' w-[200px] md:w-[600px] ml-[50px] mt-[50px] md:mt-[100px]' alt='image1' />
                 </div></div>
-        <div>
+        <motion.div initial={{opacity:0}} transition={{duration: 1}} whileInView={{opacity: 1}} viewport={{once:true}}>
             <div className='for--border pb-[10px] text-[32px] '>LANDSCAPES + <br /> PROFESSIONAL SHOOTS</div>
             <div className='text-[22px] pt-[10px]'>Discover the artistry of nature through <br />captivating landscape photography.</div>
             <div>
@@ -73,7 +74,7 @@ Get in touch
 </  div>
 
             </div>
-        </div>
+        </motion.div>
     </div>}
     </div>
     </div>
